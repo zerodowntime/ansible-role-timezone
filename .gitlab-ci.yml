@@ -1,0 +1,13 @@
+---
+include:
+  - project: 'misc/gitlab_templates'
+    ref: master
+    file: '/molecule/.base-template.yml'
+  - project: 'misc/gitlab_templates'
+    ref: master
+    file: '/.clone-before-script-template.yml'
+
+default:
+  extends: .molecule.default
+  script:
+    - molecule test -s libvirt
