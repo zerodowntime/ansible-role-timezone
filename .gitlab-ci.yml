@@ -7,7 +7,20 @@ include:
     ref: master
     file: '/.clone-before-script-template.yml'
 
-default:
+ansible2_7_8:
   extends: .molecule.default
+  image: zerodowntime/gitlab_runner_executor_molecule:ansible-2.7.8
+  script:
+    - molecule test -s libvirt
+
+ansible2_7:
+  extends: .molecule.default
+  image: zerodowntime/gitlab_runner_executor_molecule:ansible-2.7.0
+  script:
+    - molecule test -s libvirt
+
+ansible2_5:
+  extends: .molecule.default
+  image: zerodowntime/gitlab_runner_executor_molecule:ansible-2.5.15
   script:
     - molecule test -s libvirt
