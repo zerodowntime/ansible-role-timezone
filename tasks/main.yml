@@ -1,0 +1,12 @@
+---
+# zerodowntime.timzone/tasks/main.yml
+
+- name: 'timezone | set timezone'
+  become: true
+  timezone:
+    name: "{{ timezone__name }}"
+  notify:
+    - 'change timezone handler'
+  tags:
+    - timezone
+    - timezone::configure

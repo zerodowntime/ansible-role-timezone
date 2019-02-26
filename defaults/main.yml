@@ -1,0 +1,7 @@
+---
+# zerodowntime.timzone/defaults/main.yml
+
+# Name of the timezone for the system clock
+#   list available timezones
+#  `timedatectl list-timezones`
+timezone__name: 'UTC'

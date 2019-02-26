@@ -1,0 +1,10 @@
+---
+# role/timezone/handlers/main.yml
+
+# DOC: Needed to create empty handler to register the notify for other
+#      components like restart crond and other services and other services
+#      dependent on system time
+- name: dummy change timezone handler
+  debug:
+    msg: change timezone handler
+  listen: 'change timezone handler'
