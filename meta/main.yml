@@ -6,7 +6,7 @@ dependencies: []
 galaxy_info:
   role_name: timezone
   author: ZeroDowntime
-  description: Set MOTD banner
+  description: Set system timzone
   company: ZeroDowntime Sp. z o.o.
   license: Apache License 2.0
 
